@@ -1,0 +1,46 @@
+﻿@inject IMainPageDataUseCase mainPageDataUseCase
+@inject IJSRuntime jsRuntime
+
+<MudGrid>
+    <MudItem xs="6" sm="3">
+        <MudCard>
+            <MudCardContent>
+                <MudText>The weather for today</MudText>
+                @if (response != null)
+                {
+                    <MudText Typo="Typo.body2">You are in @(response?.Country?.EnglishName) and your time zone is @(response?.TimeZone?.Name)</MudText>
+                }
+            </MudCardContent>
+            <MudCardActions>
+                <MudButton Variant="Variant.Text" Color="Color.Primary">Learn More</MudButton>
+            </MudCardActions>
+        </MudCard>
+    </MudItem>
+</MudGrid>
+
+@code {
+    private AccuWeatherLocationResponse? response;
+    private string? myIp;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await GetIp();
+        response = await mainPageDataUseCase.ExecuteAsync(myIp);
+        await base.OnInitializedAsync();
+    }
+
+    public async Task GetIp()
+    {
+        try
+        {
+            var ipAddress = await jsRuntime.InvokeAsync<string>("getIpAddress")
+                .ConfigureAwait(true);
+            myIp = ipAddress;
+        }
+        catch (Exception e)
+        {
+            //If your request was blocked by CORS or some extension like uBlock Origin then you will get an exception.
+            myIp = string.Empty;
+        }
+    }
+}

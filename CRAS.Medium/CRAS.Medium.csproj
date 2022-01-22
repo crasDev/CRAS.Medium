@@ -13,4 +13,9 @@
 		<PackageReference Include="MudBlazor.ThemeManager" Version="1.0.5" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\CRAS.Medium.Plugins.External.Weather\CRAS.Medium.Plugins.External.Weather.csproj" />
+	  <ProjectReference Include="..\CRAS.Medium.UseCases\CRAS.Medium.UseCases.csproj" />
+	</ItemGroup>
+
 </Project>

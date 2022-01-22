@@ -5,6 +5,10 @@ VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRAS.Medium", "CRAS.Medium\CRAS.Medium.csproj", "{2A9361F5-3653-41FD-A4F4-1590756F3694}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRAS.Medium.UseCases", "CRAS.Medium.UseCases\CRAS.Medium.UseCases.csproj", "{6436BBCA-6FB4-40B0-9436-0017C11C858F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRAS.Medium.Plugins.External.Weather", "CRAS.Medium.Plugins.External.Weather\CRAS.Medium.Plugins.External.Weather.csproj", "{737B76B8-F32F-4EBC-B7D3-0F56EA102960}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{2A9361F5-3653-41FD-A4F4-1590756F3694}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A9361F5-3653-41FD-A4F4-1590756F3694}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A9361F5-3653-41FD-A4F4-1590756F3694}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6436BBCA-6FB4-40B0-9436-0017C11C858F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6436BBCA-6FB4-40B0-9436-0017C11C858F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6436BBCA-6FB4-40B0-9436-0017C11C858F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6436BBCA-6FB4-40B0-9436-0017C11C858F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{737B76B8-F32F-4EBC-B7D3-0F56EA102960}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{737B76B8-F32F-4EBC-B7D3-0F56EA102960}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{737B76B8-F32F-4EBC-B7D3-0F56EA102960}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{737B76B8-F32F-4EBC-B7D3-0F56EA102960}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
